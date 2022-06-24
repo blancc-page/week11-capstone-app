@@ -1,0 +1,4 @@
+ecom-virtual
+*pyc
+db*
+.env
