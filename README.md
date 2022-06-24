@@ -1,6 +1,6 @@
 # Ecommerce Website
 
-> A webapp that brings the neighbourhood together.
+> A webapp for men's fashion.
 
 ## :hammer: Built With
 
