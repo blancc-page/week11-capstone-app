@@ -39,6 +39,7 @@ def add_to_cart(request, slug):
             slug=slug
         )
     else:
+        order = order_qs[0]
         ordered_date = timezone.now()
         Order.objects.create(user=request.user, ordered_date=ordered_date)
         order.items.add(order_item)
@@ -63,6 +64,7 @@ def remove_from_cart(request, slug):
             messages.info(request, "This item is not in your cart!")
             return redirect('ecommerceApp:product', slug=slug)    
     else: 
+        order = order_qs[0]
         messages.info(request, "You do not have an active order")
         return redirect("ecommerceApp:product", slug=slug)
 
